@@ -1,9 +1,13 @@
+from application import db, create_app
 
-from flask import Flask, url_for, session, redirect
 
-app = Flask(__name__)
+app = create_app()
 
-DATABASE = ''
+
+if __name__ == '__main__':
+    print('Database location:', db.engine)
+    app.run()
+
 
 # Webpages
 #  index/root view
