@@ -1,5 +1,5 @@
 from datetime import datetime
-from models import db
+from hangman.models import db
 
 
 class Game(db.Model):

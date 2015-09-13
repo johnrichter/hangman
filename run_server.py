@@ -1,11 +1,11 @@
-from application import db, create_app
+from hangman.app import create_app, create_db
 
 
 app = create_app()
 
 
 if __name__ == '__main__':
-    print('Database location:', db.engine)
+    create_db(app)
     app.run()
 
 

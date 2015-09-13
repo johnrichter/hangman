@@ -15,9 +15,15 @@ fileConfig(config.config_file_name)
 # for 'autogenerate' support
 # from myapp import mymodel
 # target_metadata = mymodel.Base.metadata
-from models import db
-from models.game import Game
-from models.user import User
+import sys
+import os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir)))
+from hangman import app
+from hangman.models import db
+from hangman.models.game import Game
+from hangman.models.user import User
+from hangman.models.tables import roles_users
+from hangman.models.role import Role
 target_metadata = db.Model.metadata
 
 # other values from the config, defined by the needs of env.py,
